@@ -12,6 +12,8 @@ Power switch, USB port and headphone jack are new parts chosen for this build.
 
 ## Power Switch and UVLO
 
+The power switch is a momentary "spring return" power switch, electrically compatible with a DS Lite power switch. The power delivery no longer travels through the switch, instead the activation triggers the input of an ON/OFF controller IC - the output of which is connected to the enable pin of the primary power regulator. A 2.9V low voltage lockout chip runs from VCC to the clear line of the ON/OFF controller. When the voltage output from the charging/load sharing IC drops below 2.9v, this will shut the system off, and keep it off until the switch is triggered again. This ensures the lithium polymer battery does not drop to exceptionally low levels.
+
 ## USB Charging
 
 ## 5v Regulator
