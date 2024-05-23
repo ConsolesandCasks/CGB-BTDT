@@ -12,16 +12,16 @@ Power switch, USB port and headphone jack are new parts chosen for this build.
 
 ## Power Switch and UVLO
 
-The power switch is a momentary "spring return" power switch, electrically compatible with a DS Lite power switch. The power delivery no longer travels through the switch, instead the activation triggers the input of an ON/OFF controller IC - the output of which is connected to the enable pin of the primary power regulator. A 2.9V low voltage lockout chip runs from VCC to the clear line of the ON/OFF controller. When the voltage output from the charging/load sharing IC drops below 2.9v, this will shut the system off, and keep it off until the switch is triggered again. This ensures the lithium polymer battery does not drop to exceptionally low levels.
+The power switch is a momentary "spring return" power switch, electrically compatible with a DS Lite power switch. The power delivery no longer travels through the switch, instead the activation triggers the input of an ON/OFF controller IC - the output of which is connected to the enable pin of the primary power regulator. A 2.9V low voltage lockout chip runs from VCC to the clear line of the ON/OFF controller. When the voltage output from the charging/load sharing IC drops below 2.9v, this will shut the system off, and keep it off until the switch is triggered again. This ensures the lithium polymer battery does not drop to exceptionally low levels - while I recommend using a battery with an internal DW01 protection IC to prevent over-discharge, this is added protection.
 
 ## USB Charging and Load Sharing
 
-USB Charging and Battery Management are controlled by the TI BQ24072 IC. This chip has a DPPM feature to allow safe simultaneous play and charge. The battery positive rail is only connected to this IC and the battery life indicator LED circuit.
+USB Charging and Battery Management are controlled by the TI BQ24072 IC. This chip has a DPPM feature to allow safe simultaneous play and charge. The battery positive rail is only connected to this IC and the battery life indicator LED circuit. 
 
 ## 5v Regulator
 
-The switching regulator in this circuit is a TPS63802. This is a buck-boost regulator with high efficiency and low noise. It supports as low as 1.3v input voltage, and as high as 5.5v - both far beyond the expected range of the battery inpu
+The switching regulator in this circuit is a TPS63802. This is a buck-boost regulator with high efficiency and low noise. It supports as low as 1.3v input voltage, and as high as 5.5v - both far beyond the expected range of the battery input. This regulator has the added benefit of a relatively low required external component count with small size.
 
 ## Power Indicator
 
-
+The power indicator is a 2-stage indicator circuit. The first stage is lit when the device is powered on, and the battery is above nominal level. Once the battery drops below the nominal level, this LED will shut off, and the low battery LED will turn on. Additionally, there is a third LED indicator for battery charging.
