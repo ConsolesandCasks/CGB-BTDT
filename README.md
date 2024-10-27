@@ -34,7 +34,7 @@ USB Charging and Battery Management are controlled by the TI BQ24072 IC. This ch
 ### 5V Regulator
 
 The switching regulator in this circuit is a TPS63802. This is a buck-boost regulator with high efficiency and low noise. It supports as low as 1.3v input voltage, and as high as 5.5v - both far beyond the expected range of the battery input. This regulator has the added benefit of a relatively low required external component count with small size. I've been on the hunt for the perfect GBC regulator IC and this one is my favorite so far. The addition of an open-drain power-good output removes the need for an external power discharge mosfet. My design utilizes this pin to sink 0.5mA during power-down to speed up the discharge of the power circuitry upon turning the system off and to prevent odd reset cases. The theory behind this is outlined [here](https://www.ti.com/lit/an/slvafk9/slvafk9.pdf) (using a different boost converter IC with a PG pin that has a higher current sink capacity)
-<br/>There is a jumper to swap this IC between power-save mode and PWM-only mode. You might find a reduction in audible noise with power save mode disabled.
+<br/>There is a jumper to swap this IC between power-save mode (jump right and middle) and PWM-only mode (jump left and middle). You might find a reduction in audible noise with power save mode disabled.
 
 ### Power Indicator
 
@@ -47,7 +47,7 @@ The Amp circuit is identical to the MGBC amp circuit.
 
 ### IR Circuit
 
-The IR circuit is identical to OEM and the OEM parts can be reused. I've also tested an available off-the-shelf IR LED and IR phototransistor that work as drop-in replacements. I have not yet tested the overall reliability of those components, only that they function. It is possible that some adjustments to the other passive components in the circuit would improve performance. 
+The IR circuit is identical to OEM and the OEM parts can be reused. I've also tested an available off-the-shelf IR LED and IR photodiode that work as drop-in replacements. I have not yet tested the overall reliability of those components, only that they function. It is possible that some adjustments to the other passive components in the circuit would improve performance. 
 
 ## BOM
 TBD
