@@ -1,5 +1,6 @@
 # CGB-BTDT
 Been There, Done That (Board test, Deceptive Thinker)
+<p><img src="/images/front_built.jpg" width="425" /><img src="/images/rear_built.jpg" width="425" /></p>
 
 What started with a simple thought: "I don't think there's anything new on this board - just stuff other people have already done", has become somewhat of an understatement in the end.
 
@@ -16,6 +17,9 @@ Power delivery and indicator circuitry is entirely new. The 5v regulator, USB Ch
 Power switch, USB port and headphone jack are new parts chosen for this build.
 
 ## Technical Details
+### PCB Images
+<p><img src="/images/front_pcb.jpg" width="425" /><img src="/images/rear_pcb.jpg" width="425" /></p>
+
 ### Power Switch and UVLO
 
 The power switch is a momentary "spring return" power switch, electrically compatible with a DS Lite power switch. My work with this circuit became the basis for my [SwiftSwitch](https://github.com/ConsolesandCasks/SwiftSwitch-GBC) mod, which required some minor component changes due to the requirements of the stock GBC power delivery circuitry.
@@ -50,14 +54,14 @@ The Amp circuit is identical to the MGBC amp circuit.
 The IR circuit is identical to OEM and the OEM parts can be reused. I've also tested an available off-the-shelf IR LED and IR photodiode that work as drop-in replacements. I have not yet tested the overall reliability of those components, only that they function. It is possible that some adjustments to the other passive components in the circuit would improve performance. 
 
 ## BOM
-TBD
+Preliminary BOM for current revision is [here](https://github.com/ConsolesandCasks/CGB-BTDT/blob/main/BTDT_BOM_r5v1.xlsx)
 
 ## Production Files
-TBD
+To Be Added - 11/24
 
 ## Credits
-[Bucket Mouse](https://github.com/MouseBiteLabs) - base circuit design that I've massacred [MGBC-MBL](https://github.com/MouseBiteLabs/Game-Boy-Pocket-Color)
-<br/>[LeggoMyFroggo](https://github.com/leggomyfroggo/) - inspiration towards some component selection and circuit design [FBC](https://github.com/leggomyfroggo/FBC)
-<br/>[Zekfoo](https://github.com/Zekfoo/) - doing basically the same thing, years ago, before I did, probably better [CGZ](https://github.com/Zekfoo/CGZ) (been there, done that)
+[Bucket Mouse](https://github.com/MouseBiteLabs) - base circuit design that I've massacred: [MGBC-MBL](https://github.com/MouseBiteLabs/Game-Boy-Pocket-Color)
+<br/>[LeggoMyFroggo](https://github.com/leggomyfroggo/) - inspiration towards some component selection and circuit design: [FBC](https://github.com/leggomyfroggo/FBC)
+<br/>[Zekfoo](https://github.com/Zekfoo/) - doing basically the same thing, years ago, before I did, probably better: [CGZ](https://github.com/Zekfoo/CGZ) (been there, done that)
 <br/>[Modded Gameboy Club](https://moddedgameboy.club/) - providing whatever support, advice, and other input
 <br/>[b23n](https://b-2-3-n.mmm.page/) - shell polishing [technique](https://mmm.page/b-2-3-n/mod-polishing) 
